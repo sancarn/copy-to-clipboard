@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <script>
+      window.onload = function(){
+        const url = new URL(window.location.href)
+        if(url.searchParams.has("copy"))){
+          const text = url.searchParams.get("copy")
+          bodyText = "Copied text \"" + searchParams + "\" to the clipboard"
+          navigator.clipboard.writeText(text)
+        } else {
+          bodyText = "No \"copy\" parameter applied to URL."
+        }
+        
+        const textnode = document.createTextNode("Copied text \"\" to the clipboard");
+        document.body.appendChild(textnode);
+      }
+    </script>
+  </head>
+  <body>
+    
+  </body>
+</html>
