@@ -3,7 +3,7 @@
     <script>
       window.onload = function(){
         const url = new URL(window.location.href)
-        if(url.searchParams.has("copy"))){
+        if(url.searchParams.has("copy")){
           const text = url.searchParams.get("copy")
           bodyText = "Copied text \"" + searchParams + "\" to the clipboard"
           navigator.clipboard.writeText(text)
