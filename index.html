@@ -6,7 +6,11 @@
         if(url.searchParams.has("copy")){
           const text = url.searchParams.get("copy")
           bodyText = "Copied text \"" + text + "\" to the clipboard"
-          navigator.clipboard.writeText(text)
+          try {
+            navigator.clipboard.writeText(text)
+          } catch (e) {
+            bodyText = "Failed to set text to clipboard."
+          }
         } else {
           bodyText = "No \"copy\" parameter applied to URL."
         }
