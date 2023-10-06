@@ -6,17 +6,25 @@
         if(url.searchParams.has("copy")){
           const text = url.searchParams.get("copy")
           bodyText = "Copied text \"" + text + "\" to the clipboard"
+          var success;
           try {
             navigator.clipboard.writeText(text)
+            success = true
           } catch (e) {
-            bodyText = "Failed to set text to clipboard."
+            bodyText = "Failed to set text to clipboard. Copy it manually: " + text
+            success = false
           }
         } else {
           bodyText = "No \"copy\" parameter applied to URL."
+          success = false
         }
         
         const textnode = document.createTextNode("Copied text \"\" to the clipboard");
         document.body.appendChild(textnode);
+
+        if(success){
+          window.close()
+        }
       }
     </script>
   </head>
