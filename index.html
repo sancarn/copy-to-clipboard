@@ -5,7 +5,7 @@
         const url = new URL(window.location.href)
         if(url.searchParams.has("copy")){
           const text = url.searchParams.get("copy")
-          bodyText = "Copied text \"" + searchParams + "\" to the clipboard"
+          bodyText = "Copied text \"" + text + "\" to the clipboard"
           navigator.clipboard.writeText(text)
         } else {
           bodyText = "No \"copy\" parameter applied to URL."
