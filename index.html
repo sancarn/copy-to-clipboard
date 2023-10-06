@@ -5,7 +5,7 @@
         const url = new URL(window.location.href)
         if(url.searchParams.has("copy")){
           const text = url.searchParams.get("copy")
-          bodyText = "Copied text \"" + text + "\" to the clipboard"
+          bodyText = "Copied text \"" + text + "\" to the clipboard."
           var success;
           try {
             navigator.clipboard.writeText(text)
@@ -19,13 +19,13 @@
           success = false
         }
         
-        const textnode = document.createTextNode("Copied text \"\" to the clipboard");
+        const textnode = document.createTextNode(bodyText);
         document.body.appendChild(textnode);
 
         if(success){
           window.setTimeout(function(){
             window.close()
-          }, 5000)
+          }, 1000)
         }
       }
     </script>
