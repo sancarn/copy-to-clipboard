@@ -4,6 +4,8 @@
 
 Links like [`https://sancarn.github.io/copy-to-clipboard/index.html?copy=orange`](https://sancarn.github.io/copy-to-clipboard/index.html?copy=orange) will copy `orange` to the clipboard (as long as the user enables it).
 
+Note: Not this uses the `Clipboard` API and isn't anything to shout home about. This will not be compatible with old browsers.
+
 ## Usage in sharepoint lists
 
 The intiial reason I created this site is a workaround to inflexible sharepoint APIs / security. In sharepoint you can add format JSON to fields, to format data in a different way. I wanted to add a button to a field which would allow the user to copy the data within. Unfortunately this cannot be done with the sharepoint site alone, so the work around is to use a seperate helper site.
