@@ -4,7 +4,7 @@
 
 Links like [`https://sancarn.github.io/copy-to-clipboard/index.html?copy=orange`](https://sancarn.github.io/copy-to-clipboard/index.html?copy=orange) will copy `orange` to the clipboard (as long as the user enables it).
 
-Note: Not this uses the `Clipboard` API and isn't anything to shout home about. This will not be compatible with old browsers.
+> Note: This uses the `Clipboard` API and isn't anything to shout home about. This will not be compatible with old browsers.
 
 ## Usage in sharepoint lists
 
