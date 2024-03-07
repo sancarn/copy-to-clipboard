@@ -23,8 +23,10 @@
         document.body.appendChild(textnode);
 
         if(success){
-          window.setTimeout(function(){
-            window.close()
+          window.setTimeout(async function(){
+            if (await navigator.clipboard.readText() == text){
+              window.close()
+            }
           }, 1000)
         }
       }
