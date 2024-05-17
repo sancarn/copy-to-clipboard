@@ -3,8 +3,9 @@
     <script>
       window.onload = function(){
         const url = new URL(window.location.href)
+        var text;
         if(url.searchParams.has("copy")){
-          const text = url.searchParams.get("copy")
+          text = url.searchParams.get("copy")
           bodyText = "Copied text \"" + text + "\" to the clipboard."
           var success;
           try {
